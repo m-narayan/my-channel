@@ -1,0 +1,10 @@
+/*
+ *= require avatars_for_rails
+ */
+
+@import "colors";
+
+.ui-effects-transfer {
+	border: 2px solid $separation-color;
+	background-color: $secondary-color;
+}
