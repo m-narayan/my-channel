@@ -30,6 +30,8 @@ gem 'social_stream', '>= 1.0.0'
 
 gem 'forgery'
 
+gem 'rubygems-update'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

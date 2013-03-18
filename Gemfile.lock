@@ -207,6 +207,7 @@ GEM
     riddle (1.5.5)
     rmagick (2.13.2)
     ruby-imagespec (0.2.0)
+    rubygems-update (2.0.3)
     sass (3.2.7)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -314,6 +315,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 3.2.12)
+  rubygems-update
   sass-rails (~> 3.2.3)
   social_stream (>= 1.0.0)
   sqlite3
