@@ -6,4 +6,6 @@
 <% else %>
   SocialStream.Timeline.create();
   alert('<%= j @post.errors.full_messages.to_sentence %>');
+  $('.advanced-reset-btn').click(function() { $('#your-form')[0].reset() })
+
 <% end %>

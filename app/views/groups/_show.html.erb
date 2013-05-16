@@ -9,7 +9,6 @@
     <%= @group.name+" "+t('profile.is_on') + " "+ t('site.name') %>
   <% end %>
 <% end %>
-
 <% content_for :keywords do %>
   <%= @group.profile.subject.tag_list%>
 <% end %>
@@ -19,7 +18,59 @@
 <%= location(link_to(t('group.one')+": "+truncate_name(sanitize @group.name)))%>
                       
 <% toolbar :profile, :subject => @group %>
+<table><tr><td valign="top" style="width: 120px;text-align:center;font-size:10px;text-align:center;">
 
+  
+ <%= link_to (image_tag(@group.logo.url , :size => "120x120", :alt => current_subject.name )), current_subject  %>
+   <% if @group.slug==current_subject.slug %>
+      <%= link_to t('avatar.profile_change'), avatars_path  %>
+      <% end %>
+   </td>
+ <td valign="top"><div class="block">
+    <div class="header">
+      
+      <div class="header_text">
+    About
+      </div>
+    </div>
+    <div class="content">
+      <div class="suggestions">
+      <table style="width: 215px;" >
+<tr><td><span>Name:</span></td><td><%=@group.name%></td></tr>
+<tr><td><span>Age:</span></td><td><%=@group.profile.age%></td></tr>
+<tr><td><span>Comapny:</span></td><td><%=@group.profile.organization%> </td></tr>
+<tr><td><span>Experience:</span></td><td><%=@group.profile.experience%></td></tr>
+</table>
+      </div>
+    </div>
+  </div></td>
+  <td valign="top"><div class="block">
+    <div class="header">
+      
+      <div class="header_text">
+    Contact Information
+      </div>
+    </div>
+    <div class="content">
+      <div class="suggestions">
+        <table style="width: 215px;">
+    <% if @group.profile.mobile != '' %>
+<tr><td><span>Mobile:</span></td><td> <%=@group.profile.mobile%></td></tr>
+<% else %>
+<tr><td><span>Telephone:</span></td><td> <%=@group.profile.phone%></td></tr>
+<% end %>
+<tr><td><span>Street address:</span></td><td> <%=@group.profile.address%></td></tr>
+<tr><td><span>City:</span></td><td> <%=@group.profile.city%></td></tr>
+<tr><td><span>Zip-code:</span></td><td> <%=@group.profile.zipcode%></td></tr>
+<tr><td><span>Email-address:</span> </td><td><%=@group.actor.email%></td></tr>
+</table>
+             </div>
+    </div>
+  </div><% if @group.slug == current_subject.slug%>
+  <a href="/groups/<%= current_subject.slug %>/profile" style="float:right;">Edit Profile</a>
+  <% end %></td></tr>
+</table>
+  
 <br class="clearfloat" />
 <div class="space_center">
 </div>

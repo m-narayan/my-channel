@@ -1,9 +1,9 @@
 @import "colors";
 
 /*************Basic SECTION ********************/
-* {	margin: 0;	padding: 0;	font-family: Arial; }
+* {	margin: 0;	padding: 0;	font-family: 'Lato', sans-serif; }
 html, body {height: auto;}
-.p {	margin: 0px;	padding: 0px;	font-size: inherit;	font-family: inherit;	font-weight: inherit;
+.p {	margin: 0px;	padding: 0px;	font-size: inherit;	font-weight: inherit;
       text-align: inherit;	color: inherit;	line-height: inherit;	vertical-align: top;}
 p {	padding-top: 0px;	margin-top: 0px;}
 img {	border: 0px;}
@@ -14,7 +14,6 @@ a:link,a:visited {	color: $main-color;	font-size: inherit; text-decoration: inhe
 a:hover {	text-decoration: underline;}
 .clearfloat {	clear: both;	height: 0px;}
 h2{padding-left:10px;}
-
 
 /******* Main Structure SECTION***************************/
 body{font-size:1.0em;  color: $main-color; background-color:$text-over-main; overflow-y: scroll;}

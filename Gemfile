@@ -2,6 +2,9 @@ source 'http://rubygems.org'
 
 ruby '1.9.3'
 gem 'rails', '3.2.12'
+gem 'social_stream-presence'
+gem "better_errors", ">= 0.6.0", :group => :development
+gem "simple_form", ">= 2.0.4"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

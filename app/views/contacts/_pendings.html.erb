@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="content">
-    <%= render :partial => 'contacts/contact', :collection => current_subject.pending_contacts.shuffle.first(2) %>
+    <%= render :partial => 'contacts/contact', :collection => current_subject.pending_contacts.shuffle.first(5) %>
     <div class="row more_pending">
       <%= link_to t('contact.pending.all_n', :count => current_subject.pending_contacts_count), pending_contacts_path %>
     </div>
@@ -16,3 +16,25 @@
   </div>
 </div>
 <% end -%>
+<div class="block">
+    <div class="header">
+      <%= image_tag('btn/notifications.png', :class => "header_icon") %>
+      <div class="header_text">
+    Opportunities
+      </div>
+    </div>
+    <div class="content">
+      <div class="suggestions">
+      <div class="home_oppurtunities"><a href=""><h4>Requires 50 PCs</h4></a><p>Nestle India - Delhi, DL +1 location
+Needs 50 high configured computers ASAP</p></div>
+ <div class="home_oppurtunities"><a href=""><h4>
+Urgent reqiurements</h4></a><p>Northern Region at Nestle India Ltd. - NEW
+Need 10 container trucks, please contact within 10 days.</p></div> 
+<div class="home_oppurtunities"><a href=""><h4>Requires 50 PCs</h4></a><p>Nestle India - Delhi, DL +1 location
+Needs 50 high configured computers ASAP</p></div>
+ <div class="home_oppurtunities"><a href=""><h4>
+Urgent reqiurements</h4></a><p>Northern Region at Nestle India Ltd. - NEW
+Need 10 container trucks, please contact within 10 days.</p></div>
+      </div>
+    </div>
+  </div>

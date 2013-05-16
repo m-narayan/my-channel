@@ -7,8 +7,16 @@
     </div>
     <%= render :partial => 'activities/new', :locals => { :receiver => owner } %>
   </div>
-
+  
+  
+<% if current_subject.actor.subject_type != "Group" %>
+ <div class="channelyst_news">
+    <div class="channelyst_news_inner">
+  <div style="float:left;"> <%= image_tag('../assets/u26_normal.png', :size=>"35x35") %></div>   
+<div style="float:left;margin-left:20px;padding:10px;">
+<p><a href="" style=" font-size:18px; font-weight:bold;">Channelyst Today</a>, recommends this news for you</p></div><br>
+<%= image_tag('../assets/u29_normal.jpg',:height => "300", :width => "500")  %>
+  </div></div> <% end %> 
   <%= render :partial => 'activities/wall',
              :locals  => { :activities => activities } %>
-
 </div>

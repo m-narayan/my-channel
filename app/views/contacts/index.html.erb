@@ -13,6 +13,7 @@
       <%= image_tag("btn/search.png",:size=>"20x20",:id=>"search_button") %>
     </div>
     <div class="space_center"></div>
+
     <div class="row" >
       <div class="center">
         <%= link_to t('contact.all_n', :count => @total_contacts.count("DISTINCT contacts.id")), contacts_path %> -
@@ -26,6 +27,13 @@
       </div>
     </div>
     <div class="space_center"></div>
+    <table style="float:left;"><tr>
+      <td> <img alt="Btn_friend" src="/assets/btn/btn_friend.png"></td><td><a href="/contacts" style="padding: 0px 10px 0px 0px;">Current</a></td>
+      <td><img alt="Btn_friend" src="/assets/btn/btn_friend.png"></td><td><a href="/contacts/pending" style="padding: 0px 10px 0px 0px;">Pending</a></td>
+      <td><img alt="Btn_friend" src="/assets/btn/btn_friend.png"></td><td><a href="/ties" style="padding: 0px 10px 0px 0px;">Graph</a></td>
+      <td><img alt="Btn_invitation" src="/assets/btn/btn_invitation.png"></td><td><a href="/invitations/new" style="padding: 0px 10px 0px 0px;"> Invite</a></td>
+    </tr></table>
+       <div class="space_center"></div><br>
     <div id="list_contacts_ajax" class="tab_content block">
       <%= render :partial => "contacts/index"%>
     </div>

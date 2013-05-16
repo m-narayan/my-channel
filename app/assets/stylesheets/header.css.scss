@@ -1,11 +1,11 @@
 @import "colors";
 
-/****************** HEADER STRUCTURE ******/
-#headerFront {	width: 100%;	padding: 0px;	background: $header-color; }
+/****************** HEADER STRUCTURE background: $header-color; ******/
+#headerFront {	width: 100%;	padding: 0px;margin-top: -3px;margin-left: -3px;background-size: 100% 100%;background-image:url('../assets/u53_normal.png');}
 #header_left {	left: 0px;	float: left;	padding-left: 15px; padding-right: 5px; width:155px;}
 #header_right {	right: 0px;	float: right; padding-right: 10px;  }
 .banner_top{	width: 960px;	margin-left: auto;	margin-right: auto;	margin-top: 0px;
-	position: relative; background: $header-color; padding: 3px; }
+	position: relative; padding: 3px; }
 .banner_top_height{	height:30px;}
 
 /********** CONTENT ************/
@@ -41,7 +41,7 @@
 #menu_home, .menu_home {vertical-align: top; }
 #menu_home a {color:$text-over-main;}
 #menu_home a:hover {text-decoration: none;}
-#menu_home ul {list-style: none;	margin: 0px;	float:left;}
+#menu_home ul {list-style: none;	margin:3px;	float:left;}
 #menu_home ul li {line-height:20px;	vertical-align:top;}
 
 #header_dropdown_menu,.header_dropdown_li {width: 120px;display:inline-block;vertical-align: top; height:22px; 
@@ -130,11 +130,11 @@ ul.sf-menu li li li.sfHover ul {
 
 }
 .sf-menu li {
-	background:		$header-color;
+	/*background:		$header-color;*/
 }
 
 .sf-menu li li {
-	background:		$header-color;
+	background:	#333;
 }
 .sf-menu li li li {
 	background:		$header-color;
@@ -203,3 +203,4 @@ li.sfHover > a > .sf-sub-indicator {
 .sf-shadow ul.sf-shadow-off {
 	background: transparent;
 }
+#logo_txt h1{font-family: 'Swanky and Moo Moo', cursive;font-size: 25px; }

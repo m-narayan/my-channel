@@ -1,5 +1,4 @@
 <% sidebar %>
-
 <%= location(link_to(t('home')+": "+ truncate_name(sanitize current_subject.name)))%>
                       
 <% toolbar %>
@@ -7,13 +6,41 @@
 <br class="clearfloat" />
 <div class="space_center">
 </div>
-
-<% if current_subject.respond_to?(:recent_groups) %>
+<!--<% if current_subject.respond_to?(:recent_groups) %>
 <div id="my_groups">
-  <%= render :partial => "groups" %>
+<%= render :partial => "groups" %>
 </div>
-<% end %>
+<% end %> -->
+<div class="span7 spann7" style="border:1px solid #ddd;float:left;background:white;" >
+<div class="title">
+<div class="titleinner"><%= link_to (image_tag(current_subject.logo.url , :alt => current_subject.name )), current_subject  %></div>
+<div class="titledetails"><h2><%=current_subject.name%></h2>
+<p><span ><%=current_subject.profile.city%>,</span>
+		<span ><%=current_subject.profile.country%></span>
+	<a href="/users/<%= current_subject.slug %>/profile/edit?section=about_me">Edit Location</a></p></div>
+</div>
+<div class="span9 title_span9" style="margin-left: 16px;margin-right:5px;width:95%;" >
 
+<table cellpadding="5"  style="background:#ccc;">
+<tr>
+<td valign="top" style="border:1px solid #666;">
+<h3><%= current_subject.unread_messages_count %></h3>  <%= link_to conversations_path(box: :inbox) do %>UNREAD MESSAGES<% end %></a></td>
+<td valign="top" style="border:1px solid #666;">
+<h3 ><%= current_subject.contact_subjects.count %></h3><a href="/contacts" >CONNECTIONS</a></td>
+<td valign="top" style="border:1px solid #666;">
+<h3 ><%= current_subject.pending_contacts_count %></h3><%= link_to t('RECOMMENDATIONS', :count => current_subject.pending_contacts_count), pending_contacts_path %></td>
+<td valign="top" style="border:1px solid #666;">
+<h3 >7</h3><a href="" >TOTAL VIEWS</a></td>
+<td valign="top" style="border:1px solid #666;">
+<h3 >1</h3><a href="" >OPPORTUNITIES REPLIES</a></td>
+</tr>
+</table>
+</div>
+</div>
+    
 <%= render :partial => "activities/index",
            :locals => { :activities => current_subject.wall(:home).page(params[:page]),
                         :owner => current_subject } %>
+                        
+
+    

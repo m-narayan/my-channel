@@ -3,8 +3,14 @@
 <div class="space_center">
 </div>
 <div class="space_center"></div>
-
-
+<table style="float:left;"><tr>
+      <td> <img alt="Message_new" src="/assets/btn/message_new.png"></td><td><a href="/messages/new" style="padding: 0px 10px 0px 0px;">New Message</a></td>
+      <td><img alt="Message_inbox" src="/assets/btn/message_inbox.png"></td><td><a href="/conversations" style="padding: 0px 10px 0px 0px;">Inbox</a></td>
+      <td><img alt="Message_sentbox" src="/assets/btn/message_sentbox.png"></td><td><a href="/conversations?box=sentbox" style="padding: 0px 10px 0px 0px;">Sentbox</a></td>
+      <td><img alt="Message_trash" src="/assets/btn/message_trash.png"></td><td><a href="/conversations?box=trash" style="padding: 0px 10px 0px 0px;">Trash</a></td>
+    </tr></table>
+       <br>
+<br>
 <h2><%= t('message.' + @box) %></h2>
 <div class="conversations">  
   <%= render :partial => 'conversations' %>

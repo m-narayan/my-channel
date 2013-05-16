@@ -1,4 +1,5 @@
 <%= div_for contact, :class => 'row' do %>
+<% if contact.receiver_subject.subject_type != "Group" %>
   <div class="logo">
     <%= link_to(image_tag(contact.receiver.logo.url(:contact)),
                 contact.receiver_subject) %>
@@ -17,4 +18,5 @@
   <div class="close"><%= link_to 'X', contact, :method => :delete, :remote => true %></div>
   <div class="space_center">
   </div>  
+  <% end %>
 <% end %>

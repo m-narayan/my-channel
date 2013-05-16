@@ -3,12 +3,16 @@
 <html lang="<%= I18n.locale.to_s %>">
   <head>
     <meta charset="utf-8">
-    <title><%= yield(:title).empty? ? t('site.name') : yield(:title)%></title>
+    <title><%= yield(:title).empty? ? t('site.name') : "Channelyst"%></title>
     <meta name="keywords" content="<%= t('profile.tags.default') %><%= yield(:keywords) %>" >
     <meta name="description" content= "<%= yield(:description).empty? ? t('frontpage.main_title') : yield(:description) %>" >
-    <meta name="generator" content="SocialStream" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-
+  <meta name="generator" content="SocialStream" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Meie+Script' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Faster+One' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
 
@@ -19,7 +23,6 @@
     <% if protect_against_forgery? %>
       <%= csrf_meta_tag %>
     <% end %>
-
     <script type="text/javascript">
       I18n.defaultLocale = "<%= I18n.default_locale %>";
       I18n.locale = "<%= I18n.locale %>";
@@ -63,4 +66,5 @@
       <footer><%= render :partial => "layouts/footer" %></footer>
     </div>
   </body>
+  <%= debug(params) if Rails.env.development? %>
 </html>

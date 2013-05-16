@@ -24,11 +24,139 @@
 <br class="clearfloat" />
 <div class="space_center">
 </div>
+<table><tr><td valign="top" style="width: 120px;text-align:center;font-size:10px;text-align:center;">
 
-<%= render :partial => "users/groups",
-           :locals  => { :user => @user } %>
+  
+ <%= link_to (image_tag(@user.logo.url , :size => "120x120", :alt => current_subject.name )), current_subject  %>
+   <% if @user.actor.slug==current_user.actor.slug %>
+      <%= link_to t('avatar.profile_change'), avatars_path  %>
+      <% end %>
+   </td>
+ <td valign="top"><div class="block">
+    <div class="header">
+      
+      <div class="header_text">
+    About
+      </div>
+    </div>
+    <div class="content">
+      <div class="suggestions">
+      <table style="width: 215px;" >
+<tr><td><span>Name:</span></td><td><%=@user.name%></td></tr>
+<tr><td><span>Age:</span></td><td><%=@user.profile.age%></td></tr>
+<tr><td><span>Comapny:</span></td><td><%=@user.profile.organization%> </td></tr>
+<tr><td><span>Experience:</span></td><td><%=@user.profile.experience%></td></tr>
+</table>
+      </div>
+    </div>
+  </div></td>
+  <td valign="top"><div class="block">
+    <div class="header">
+      
+      <div class="header_text">
+    Contact Information
+      </div>
+    </div>
+    <div class="content">
+      <div class="suggestions">
+        <table style="width: 215px;">
+          <% if @user.profile.mobile != '' %>
+<tr><td><span>Mobile:</span></td><td> <%=@user.profile.mobile%></td></tr>
+<% else %>
+<tr><td><span>Telephone:</span></td><td> <%=@user.profile.phone%></td></tr>
+<% end %>
+<tr><td><span>Street address:</span></td><td> <%=@user.profile.address%></td></tr>
+<tr><td><span>City:</span></td><td> <%=@user.profile.city%></td></tr>
+<tr><td><span>Zip-code:</span></td><td> <%=@user.profile.zipcode%></td></tr>
+<tr><td><span>Email-address:</span> </td><td><%=@user.actor.email%></td></tr>
+</table>
+             </div>
+    </div>
+  </div> <% if @user.actor.slug==current_user.actor.slug %>
+  <a href="/users/<%= current_subject.slug %>/profile" style="float:right;">Edit Profile</a><% end %></td></tr>
+</table>
 
-<%= render :partial => "activities/index",
+<!--<%= render :partial => "activities/index",
            :locals  => { :activities => @user.wall(:profile, :for => current_subject).
                                               page(params[:page]),
-                         :owner => @user } %>
+                         :owner => @user } %> -->
+
+ <div class="span7 post_container" >
+   <div class="pro_details">
+    <div class="pro_details_inner">
+  <div style="font-size: 13px;padding: 10px;text-align: justify; border-bottom:1px solid #ddd;">
+ <p style="margin-bottom:10px;"><span style="font-size:18px;">Summary</span></p>
+ <p style="margin-bottom:10px;border-bottom:1px solid #ddd;">
+  <%=@user.profile.description%><br>
+  </p>
+ 
+  <div style="border-bottom:1px solid #ddd;">
+    <p style="margin-bottom:10px;"><span style="font-size:18px;">Experience</span></p>
+  <!-- <h4 style="margin: 0px;"><%=@user.profile.experience%></h4> -->
+  <h3 style="margin: 0px;">Distribution Manager</h3>
+<p style="padding: 5px 0px;"><span style="font-size:12px;">Newline Distributors</span></p>
+<p>August 2012 – March 2013 (8 months)Chennai Area, India</p><br>
+  <h3 style="margin: 0px;">Distribution Assistant</h3>
+<p style="padding: 5px 0px;"><span style="font-size:12px;padding: 5px 0px;">Newline Distributors</span></p>
+<p >August 2012 – March 2013 (8 months)Chennai Area, India</p><br></div>
+
+ <p style="margin-top:10px;"><span style="font-size:18px;">Investment Details</span></p>
+  <p>
+A copy of the consolidated balance sheets, consolidated statements of income, and consolidated statements of cash flows for the quarter ended September 30, 2012 and other financial tables are filed as Exhibit 99.2 to this Form 8-K and are incorporated herein by reference.
+ </p>
+ </div>
+</div>   </div>
+</div>
+
+ <div class="span7 post_container" >
+   <div class="pro_details">
+    <div class="pro_details_inner">
+  <div style="font-size: 13px;padding: 10px;text-align: justify;">
+ <div style="border-bottom:1px solid #ddd;"><p ><span style="font-size:18px;font-weight:bold;">Distributors</span></p>
+
+  <% if (cs = @user.contact_subjects(:direction => :sent)).present? %>
+  <% cs.each do |contact| %>
+        <% if contact.actor.subject_type != "Group" %>
+<div style="width:138px;margin:5px 10px;display: inline-block;">
+<div style="float:left;">
+         <%= link_to(image_tag(contact.logo.url(:contact), :alt => contact.name, :title => contact.name, :size => "50x50"), contact) %></div>
+ <div style="float:left;">         
+<p style="margin-top:5px;margin-left:5px;font-size:12px;line-height:16px;"><%=contact.actor.name%>,<br> <%=contact.actor.profile.organization%><br><a href=""></a></p></div> </div><% end %>
+        <% end %>
+      <% end %>
+   </div>
+   <div style="border-bottom:1px solid #ddd;">
+ <p><span style="font-size:18px;font-weight:bold;">Groups</span></p>
+ <% if (cs = @user.contact_subjects(:direction => :sent)).present? %>
+  <% cs.each do |contact| %>
+        <% if contact.actor.subject_type != "User" %>
+<div style="width:100px;margin:5px 10px;display: inline-block;">
+<div style="float:left;">
+         <%= link_to(image_tag(contact.logo.url(:contact), :alt => contact.name, :title => contact.name, :size => "50x50"), contact) %><h2 style="text-align:center;color:#666;"><%=contact.actor.name%></h2></div>
+ <div style="float:left;">         
+<!-- <p style="margin-top:5px;margin-left:5px;font-size:12px;line-height:16px;"><%=contact.actor.name%>,<br> <%=contact.actor.profile.organization%><br><a href=""></a></p> --></div> </div><% end %>
+        <% end %>
+      <% end %>
+</div>
+<div >
+
+ <p><span style="font-size:18px;font-weight:bold;">Comapnies</span></p>
+<table style="text-align:LEFT;font-weight:bold;color:black;font-size:17px;" cellpadding="20px;">
+<tr><td><%= image_tag('../assets/godreg.png',:height => "41", :width => "106")  %><br>Godrej<br><span style="font-size:13px;font-weight:normal;colr:#666;">Retail and Marketing Industry</span></td>
+<td><%= image_tag('../assets/esr.png',:height => "41", :width => "106")  %><br>Essar<br><span style="font-size:13px;font-weight:normal;colr:#666;">Retail and Marketing Industry</span></td>
+<td><%= image_tag('../assets/colgate.png',:height => "41", :width => "106")  %><br>Colgate<br><span style="font-size:13px;font-weight:normal;colr:#666;">Retail and Marketing Industry</span></td>
+<td><%= image_tag('../assets/info.png',:height => "41", :width => "106")  %><br>Infotech<br><span style="font-size:13px;font-weight:normal;colr:#666;">Retail and Marketing Industry</span></td></tr>
+<tr><td><%= image_tag('../assets/jk.png',:height => "41", :width => "106")  %><br>JK Group<br><span style="font-size:13px;font-weight:normal;colr:#666;">Retail and Marketing Industry</span></td>
+<td><%= image_tag('../assets/nestle.png',:height => "41", :width => "106")  %>
+  <br>Nestle<br><span style="font-size:13px;font-weight:normal;colr:#666;">Retail and Marketing Industry</span></td>
+<td><%= image_tag('../assets/tata.png',:height => "41", :width => "106")  %><br>TATA<br><span style="font-size:13px;font-weight:normal;colr:#666;">Retail and Marketing Industry</span></td>
+<td><%= image_tag('../assets/mahe.png',:height => "41", :width => "106")  %><br>Mahindra<br><span style="font-size:13px;font-weight:normal;colr:#666;">Retail and Marketing Industry</span></td></tr>
+</table>
+ </div>
+ </div>
+</div>   </div>
+ 
+
+
+
+      

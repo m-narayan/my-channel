@@ -1,16 +1,25 @@
-<div id="logo_index">
+<!-- <div id="avatar_profile">
+  <%= link_to image_tag(subject.logo.url(:medium), :alt => subject.name , :size => "150x150"), subject %>
+
   <% if subject == current_subject %>
-    <div class="center">
-      <span class="title_bold" ><%= subject.name %></span>
-      <div class="logo_grid logo_full">          
-        <%= link_to image_tag(subject.logo.url(:profile), :alt => subject.name , :size => "119x119", :id => "current_avatar_img"), subject %>    
-        <div class="logo_menu logo_caption">    
-          <%= link_to t('avatar.profile_change'), avatars_path  %>
-        </div>
-      </div>        
+    <div class="logo_menu logo_caption">    
+      <%= link_to t('avatar.profile_change'), polymorphic_path([subject, :profile], section: :avatar)  %>
     </div>        
-  <% else %>
-    <div class="center"><span class="title_bold" ><%= subject.name %></span></div>
-    <%= link_to image_tag(subject.logo.url, :alt => subject.name , :size => "119x119"), subject %>
   <% end %>
+</div>
+
+<div class= "subject-name-phone">
+  <%= subject.name %>
+</div> -->
+<div class="span1" style="width:100%;">
+<table cellpadding="10" style="text-align:center;margin-top:40px;font-size:11px;">
+<tbody><tr><td>
+  <img alt="Dash1" src="../../../assets/dash1.png"><br><a href="/home" style="color:#666;">Dashboard</a></td></tr>
+<tr><td>  <img alt="Pro" src="../../../assets/pro.png"><br><a href="/users/<%=current_user.slug %>" style="color:#666;">My Profile</a></td></tr>
+<tr><td>  <img alt="Pro" src="../../../assets/files.png" style="width:36px;height:21px;"><br><a href="/users/<%=current_user.slug %>/documents" style="color:#666;">My files</a></td></tr>
+<tr><td>  <img alt="Groups" src="../../../assets/groups.png"><br><a href="/contacts" style="color:#666;">My Connections</a></td></tr>
+<tr><td>  <img alt="Comp" src="../../../assets/comp.png"><br><a href="/groups/new" style="color:#666;">Add Group</a></td></tr>
+<tr><td>  <img alt="Jobs" src="../../../assets/jobs.png"><br>My Recommendations</td></tr>
+<tr><td>  <img alt="Settings" src="../../../assets/settings.png"><br><a href="/settings" style="color:#666;">Settings</a></td></tr>
+</tbody></table>
 </div>

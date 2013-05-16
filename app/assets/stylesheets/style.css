@@ -1,0 +1,254 @@
+/*@charset "utf-8";
+/* CSS Document */
+/*
+body
+{
+	background-image:url(../img/bg.png);
+}
+
+.add
+{
+float:right;
+margin-top:-30px;
+margin-right:205px;
+}
+.spann7
+{
+background:white;
+
+}
+.title
+{
+float:left;
+width:100%;
+
+
+}
+.titleinner
+{
+float:left;
+margin-left:25px;
+padding:10px;
+}
+.ptitleinner
+{
+float:left;
+
+padding:10px;
+}
+.titleinner img
+{
+width:75px;height:75px;
+}
+.ptitleinner img
+{
+width:129px;height:134px;
+}
+.titledetails
+{
+float:left;margin-left:25px;padding:10px;
+}
+.titledetails span
+{
+padding:0px 5px;
+}
+.title_span9
+{
+margin-left:100px;margin-bottom:10px;
+}
+.title_span9 table
+{
+text-align: center;font-size: 10px;line-height: 11px;
+}
+.title_span9 table a
+{
+	color:#666;
+}
+.title_span9 table h3
+{
+	padding:0px; margin:0px;
+}
+
+.post_container
+{
+background:white;margin-top:10px;margin-left: 98px;
+}
+.posthere
+{
+width:85%;margin:20px auto;
+}
+
+.channelyst_news
+{
+width:100%;margin:0px auto;
+}
+.channelyst_news_inner
+{
+float:left;width:100%;border-radius:5px;
+}
+.opportunities
+{
+width:100%;margin:0px auto;
+}
+.opportunities_inner
+{
+float:left;width:100%;margin-top:15px;border-radius:5px;
+}
+.home_oppurtunities
+{
+width:45%;margin-left:20px;float:left;border:1px solid #333;margin-bottom:20px;font-size:13px;height:80px;
+}
+.home_oppurtunities h4
+{
+	margin:0px; padding:0px;font-size: 15px;
+}
+.side_bar
+{
+	width:100%;
+	background:white;
+margin-top:-190px;float:left;
+
+}
+.box
+{
+	width:100%;
+	padding:0px 10px;
+}
+.pbox
+{
+	width:220px;
+	border:1px solid #666;
+	margin:10px; float:left;
+	height:150px;
+	}
+.pbox_title
+{
+	height:35px;
+	width:223px;;
+	background-image:url(../img/u54_normal.png);
+	font-size:20px;
+	margin-top: -3px;
+margin-left: -3px;
+	float:left;
+	padding:0px;
+}
+.pbox_title p
+{
+padding: 9px;
+font-weight: bold;
+color:white;
+font-size:16px;
+}
+.pbox_content span
+{
+	color:#666;
+	font-size:11px;
+}
+.pbox_content
+{
+	color:#000;
+	font-size:12px;
+}
+.pro_details
+{
+	width:100%;margin:0px auto;
+}
+.pro_details_inner
+{
+	float:left;width:100%;margin-top:0px auto;
+}
+.message{
+	margin-left: 60px;
+float: left;
+}*/
+body{font-family: "Lato",sans-serif; }
+.title
+{
+float:left;
+width:100%;
+
+
+}
+.titleinner
+{
+float:left;
+margin-left:25px;
+padding:10px;
+}
+.ptitleinner
+{
+float:left;
+
+padding:10px;
+}
+.titleinner img
+{
+width:75px;height:75px;
+}
+.ptitleinner img
+{
+width:129px;height:134px;
+}
+.titledetails
+{
+float:left;margin-left:0px;padding:30px;
+background:white;
+
+}
+.titledetails span
+{
+padding:0px 5px;
+
+
+}
+.title_span9
+{
+margin-left:100px;margin-bottom:10px;
+background:white;
+float:left;
+
+}
+.title_span9 table
+{
+text-align: center;font-size: 10px;line-height: 11px; border-radius:5px;float:left;
+}
+.title_span9 table td
+{
+	border-radius:5px;
+	padding: 5px;
+}
+.title_span9 table a
+{
+	color:#666;
+	font-size:11px;
+}
+.title_span9 table h3
+{
+	padding:0px; margin:0px;
+}
+.channelyst_news
+{
+width:100%;margin:0px auto;
+}
+.channelyst_news_inner
+{
+float:left;width:100%;border-radius:5px;
+}
+.opportunities
+{
+width:100%;margin:0px auto;
+}
+.opportunities_inner
+{
+float:left;width:100%;margin-top:15px;border-radius:5px;
+}
+.home_oppurtunities
+{
+margin-left:20px;float:left;border-bottom:1px solid #ddd;margin-bottom:20px;font-size:13px;height:80px;
+}
+.home_oppurtunities h4
+{
+	margin:0px; padding:0px;font-size: 15px;
+}
+
+.channelyst_news_inner img{margin-left:30px;}
