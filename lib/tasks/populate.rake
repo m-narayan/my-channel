@@ -49,7 +49,7 @@ namespace :db do
       # Create demo user if not present
       if User.find_by_name('demo').blank?
         User.create! :name => 'Demo',
-                     :email => 'demo@retailnet.com',
+                     :email => 'demo@channelyst.com',
                      :password => 'demonstration',
                      :password_confirmation => 'demonstration'
       end

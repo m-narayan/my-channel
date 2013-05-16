@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RetailNet::Application.load_tasks
+Channelyst::Application.load_tasks

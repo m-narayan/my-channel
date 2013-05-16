@@ -13,7 +13,7 @@ AddMissingActivivityIndexes	db/migrate/20130313165536_add_missing_activivity_ind
 AddNotificationCode	db/migrate/20130313165526_add_notification_code.mailboxer_engine.rb	/^class AddNotificationCode < ActiveRecord::Migration$/;"	c
 AddNotifiedObject	db/migrate/20130313165525_add_notified_object.mailboxer_engine.rb	/^class AddNotifiedObject < ActiveRecord::Migration$/;"	c
 AddVisitCountToActivityObject	db/migrate/20130313165530_add_visit_count_to_activity_object.social_stream_base_engine.rb	/^class AddVisitCountToActivityObject < ActiveRecord::Migration$/;"	c
-Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:RetailNet
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Channelyst
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
 BrowsingTest	test/performance/browsing_test.rb	/^class BrowsingTest < ActionDispatch::PerformanceTest$/;"	c
@@ -31,7 +31,7 @@ CreateSocialStreamPresence	db/migrate/20130313165540_create_social_stream_presen
 FixActivityObjectFollowerCount	db/migrate/20130313165534_fix_activity_object_follower_count.social_stream_base_engine.rb	/^class FixActivityObjectFollowerCount < ActiveRecord::Migration$/;"	c
 RelationPublicPermissions	db/migrate/20130313165531_relation_public_permissions.social_stream_base_engine.rb	/^class RelationPublicPermissions < ActiveRecord::Migration$/;"	c
 RemoveActivityChannels	db/migrate/20130313165532_remove_activity_channels.social_stream_base_engine.rb	/^class RemoveActivityChannels < ActiveRecord::Migration$/;"	c
-RetailNet	config/application.rb	/^module RetailNet$/;"	m
+Channelyst	config/application.rb	/^module Channelyst$/;"	m
 change	db/migrate/20130313165527_add_attachments.mailboxer_engine.rb	/^  def change$/;"	f	class:AddAttachments
 change	db/migrate/20130313165528_create_social_stream.social_stream_base_engine.rb	/^  def change$/;"	f	class:CreateSocialStream
 change	db/migrate/20130313165529_create_activity_object_audiences.social_stream_base_engine.rb	/^  def change$/;"	f	class:CreateActivityObjectAudiences

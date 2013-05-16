@@ -1,4 +1,4 @@
-RetailNet::Application.routes.draw do
+Channelyst::Application.routes.draw do
   
   resources :experiences
 
