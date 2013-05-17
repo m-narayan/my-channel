@@ -1,0 +1,22 @@
+<%= div_for group, :class => 'row' do %>
+<% if group.receiver_subject.subject_type == "Group" %>
+  <div class="logo">
+    <%= link_to(image_tag(group.receiver.logo.url(:contact)),
+                group.receiver_subject) %>
+  </div>
+  <div class="sub-block">
+    <div class="name">
+      <%= link_to(truncate_name(group.receiver_subject.name), group.receiver_subject, :class => "contact_link") %>
+    </div>
+    <div class="brief">
+      <%= contact_brief(group.receiver_subject) %>
+    </div>
+    <div class="link" id="contact_link<%= dom_id(group.receiver_subject)%>">
+      <%= contact_link(group) %>
+    </div>
+  </div>
+  <div class="close"><%= link_to 'X', group, :method => :delete, :remote => true %></div>
+  <div class="space_center">
+  </div>  
+  <% end %>
+<% end %>

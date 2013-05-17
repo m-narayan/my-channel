@@ -7,7 +7,11 @@
     </div>
   </div>
   <div class="content">
-    <%= render :partial => 'contacts/contact', :collection => current_subject.pending_contacts.shuffle.first(5) %>
+    
+    <%= render :partial => 'contacts/contact', :collection => current_subject.pending_contacts.shuffle.first(3) %>
+   
+    <%= render :partial => 'contacts/group', :collection => current_subject.pending_contacts.shuffle.first(3) %>
+    
     <div class="row more_pending">
       <%= link_to t('contact.pending.all_n', :count => current_subject.pending_contacts_count), pending_contacts_path %>
     </div>

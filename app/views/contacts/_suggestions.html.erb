@@ -9,12 +9,14 @@
     </div>
     <div class="content">
       <div class="suggestions">
+        
         <%= render :partial => "contacts/contact", :collection => sgs %>
+         
       </div>
     </div>
   </div>
 <% end %>
-<% if current_subject.actor.subject_type != "Group" %>
+
 <div class="block">
     <div class="header">
       <%= image_tag('btn/notifications.png', :class => "header_icon") %>
@@ -28,7 +30,7 @@
       </div>
     </div>
   </div>
-  <% end %>
+ 
  <div class="block">
     <div class="header">
       <%= image_tag('btn/notifications.png', :class => "header_icon") %>
@@ -38,7 +40,10 @@
     </div>
     <div class="content">
       <div class="suggestions">
-        <%= render :partial => "contacts/contact", :collection => sgs %>
+       
+         
+        <%= render :partial => "contacts/group", :collection => sgs %>
+  
       </div>
     </div>
   </div>
