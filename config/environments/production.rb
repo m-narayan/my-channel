@@ -65,18 +65,13 @@ config.action_mailer.default_url_options = { :host => 'channelyst-demo.herokuapp
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-<<<<<<< HEAD
-=======
-  config.action_mailer.default_url_options = { :host => 'channelyst-demo.herokuapp.com' }
->>>>>>> 1a47111cbea629e1565ec4b93d8d0592b797fc0e
+
+  config.action_mailer.default_url_options = { :host => 'channelyst.herokuapp.com' }
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
-<<<<<<< HEAD
-
-=======
->>>>>>> 1a47111cbea629e1565ec4b93d8d0592b797fc0e
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
