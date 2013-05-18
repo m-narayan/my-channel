@@ -5,7 +5,7 @@ Channelyst::Application.configure do
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
@@ -50,7 +50,7 @@ Channelyst::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
-config.action_mailer.default_url_options = { :host => 'channelyst-demo.herokuapp.com/'}
+config.action_mailer.default_url_options = { :host => 'channelyst-demo.herokuapp.com'}
   # Enable threaded mode
   # config.threadsafe!
 
