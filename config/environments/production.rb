@@ -5,9 +5,14 @@ Channelyst::Application.configure do
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
-  config.consider_all_requests_local       = true
-  config.action_controller.perform_caching = true
 
+  config.consider_all_requests_local       = true
+
+  #config.consider_all_requests_local       = false
+
+  config.action_controller.perform_caching = true
+  config.consider_all_requests_local = false
+  
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = true
 
@@ -60,11 +65,18 @@ config.action_mailer.default_url_options = { :host => 'channelyst-demo.herokuapp
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+<<<<<<< HEAD
+=======
+  config.action_mailer.default_url_options = { :host => 'channelyst-demo.herokuapp.com' }
+>>>>>>> 1a47111cbea629e1565ec4b93d8d0592b797fc0e
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1a47111cbea629e1565ec4b93d8d0592b797fc0e
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
