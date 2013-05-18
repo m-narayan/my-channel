@@ -1,7 +1,7 @@
 @import "colors";
 
 /****************** HEADER STRUCTURE background: $header-color; ******/
-#headerFront {	width: 100%;	padding: 0px;margin-top: -3px;margin-left: -3px;background-size: 100% 100%;background-image:url('../assets/u53_normal.png');}
+#headerFront {	width: 100%;	padding: 0px;margin-top: -3px;margin-left: -3px;background-color:#616D7E;}
 #header_left {	left: 0px;	float: left;	padding-left: 15px; padding-right: 5px; width:155px;}
 #header_right {	right: 0px;	float: right; padding-right: 10px;  }
 .banner_top{	width: 960px;	margin-left: auto;	margin-right: auto;	margin-top: 0px;
@@ -49,8 +49,7 @@
 
 #header_dropdown_menu ul li {width: 120px;line-height: 15px;}
 #header_dropdown_menu ul li a{padding: .40em 1em .70em 2.5em;}
-#header_dropdown_menu ul li a:hover{color:$main-color;}
-#header_dropdown_menu ul li ul li a{padding: .40em 1em .70em 1em;}
+#header_dropdown_menu ul li a:hover{color:red;}
 #header_dropdown_menu ul li ul li ul li {width: 170px; min-height: 25px; }
 #header_dropdown_menu ul li ul li ul li a{padding: .40em 1em .70em 2.5em; display:inline;}
 #header_dropdown_menu ul li ul li ul{position: absolute; left: -170px;}
@@ -134,10 +133,14 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 .sf-menu li li {
-	background:	#333;
+	background:	#666;
+	color:black;
+}
+.sf-menu li li:hover{
+	background:#333;
 }
 .sf-menu li li li {
-	background:		$header-color;
+	background:		#666;
 }
 .sf-menu li:hover, .sf-menu li.sfHover,
 .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
@@ -188,6 +191,7 @@ li.sfHover > a > .sf-sub-indicator {
 .sf-menu ul li.sfHover > a > .sf-sub-indicator {
 	background-position: -10px 0; /* arrow hovers for modern browsers*/
 }
+
 
 /*** shadows for all but IE6 ***/
 .sf-shadow ul {

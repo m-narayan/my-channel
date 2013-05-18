@@ -210,11 +210,11 @@ float:left;
 }
 .title_span9 table
 {
-text-align: center;font-size: 10px;line-height: 11px; border-radius:5px;float:left;
+text-align: center;font-size: 10px;line-height: 11px; float:left;
 }
 .title_span9 table td
 {
-	border-radius:5px;
+
 	padding: 5px;
 }
 .title_span9 table a
@@ -252,3 +252,4 @@ margin-left:20px;float:left;border-bottom:1px solid #ddd;margin-bottom:20px;font
 }
 
 .channelyst_news_inner img{margin-left:30px;}
+div.chzn-container ul.chzn-results li:hover{background: #616D7E;};

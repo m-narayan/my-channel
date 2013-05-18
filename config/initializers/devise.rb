@@ -209,7 +209,7 @@ Devise.setup do |config|
   if Rails.env.production?
      config.omniauth :facebook, "520378398027032","1e8ccc1a45a66ff820b90ff372ebed3f"
   elsif Rails.env.development?
-    config.omniauth :facebook, "586163688080266","093ab151dc5385a434b0e03815ac851f"
+    config.omniauth :facebook, "155530364626153","bf21a4c29c79dc0edd538016af3cf171"
   end
   config.omniauth :linkedin, "325qmrpx3exu", "jMHolWFUM2aLwVtm"
                       

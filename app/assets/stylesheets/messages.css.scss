@@ -88,7 +88,7 @@
 	border-bottom:1px solid $secondary-color;
 }
 .conversations .unread {
-	background-color: $secondary-color;
+	background-color: smokewhite;
 }
 .conversations .conversation {
 	color: $main-color;
@@ -116,6 +116,10 @@
 .conversations .conversation .action {
 	float:right;
 }
+.conversations .conversation .action img{
+	width:20px;
+}
+
 .conversations .conversation .sender_name {
 }
 .conversations .conversation .subject {
@@ -137,5 +141,5 @@
 	margin: 0px 5px 0px 0px;
 }
 .conversations .unread .notification {
-	background-color: $main-color;
+	background-color: smokewhite;
 }
