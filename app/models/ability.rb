@@ -11,4 +11,5 @@ class Ability
     #      p.actor_id == Actor.normalize_id(subject)
     #    end
   end
+  
 end

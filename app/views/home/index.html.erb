@@ -13,7 +13,12 @@
 <% end %> -->
 <div class="span7 spann7" style="border:1px solid #ddd;float:left;background:white;" >
 <div class="title">
-<div class="titleinner"><%= link_to (image_tag(current_subject.logo.url , :alt => current_subject.name )), current_subject  %></div>
+<div class="titleinner">
+	<% if user.provider=="facebook"  ||user.provider=="linkedin"  %>
+	<%= link_to (image_tag(current_subject.logo.url )),   %>
+	<% else %>
+	<%= link_to (image_tag(current_subject.logo.url , :alt => current_subject.name )), current_subject  %>
+<% end %></div>
 <div class="titledetails"><h2><%=current_subject.name%></h2>
 <p><span ><%=current_subject.profile.city%>,</span>
 		<span ><%=current_subject.profile.country%></span>

@@ -211,7 +211,7 @@ Devise.setup do |config|
   elsif Rails.env.development?
     config.omniauth :facebook, "586163688080266","093ab151dc5385a434b0e03815ac851f"
   end
-  config.omniauth :linkedin, "ekxfXU8nueVSMQ9fc5KJAryBkyztUlCBYMW3DoQPzbE79WhivvzhQloRNHCHgPeB", "WYiHFT-KKFgjd45W3-pEAficmXRHmN6_6DGwj1C_ZILJlSO1gBvv6VNYXU9tybGY"
+  config.omniauth :linkedin, "325qmrpx3exu", "jMHolWFUM2aLwVtm"
                       
   
                       
